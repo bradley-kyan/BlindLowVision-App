@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/puppygoldlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/puppygold"
+        android:scaleType="centerCrop" 
+    />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1">
+            <RelativeLayout
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:id="@+id/relativeLayout1">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logowhite"
+                    android:id="@+id/imageView1" >
+                </ImageView>
+
+            </RelativeLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="160dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true">   
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/signupinitial"
+                    android:background="#00000000"
+                    android:paddingBottom="15dp"
+                    android:scaleType="centerInside" 
+                />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_alignParentBottom="true">   
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logininitial"
+                    android:background="#00000000"
+                    android:paddingTop="15dp"
+                    android:scaleType="centerInside"                 
+                />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+</RelativeLayout>
