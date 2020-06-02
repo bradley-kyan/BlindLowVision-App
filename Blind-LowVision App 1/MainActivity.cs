@@ -3,25 +3,29 @@ using Android.OS;
 using Android.Support.V7.App;
 using Android.Runtime;
 using Android.Widget;
-
+using Java.Security;
+using Android.Renderscripts;
+//https://www.youtube.com/watch?v=5CgQUbnf1Qk&ab_channel=ResoCoder
 namespace Blind_LowVision_App_1
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "Scavanger Hunt App", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
+        //Button signInButton;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.activity_main);
+            SetContentView(Resource.Layout.SignIn);
+
+            //signInButton = FindViewById<Button>(Resource.Id.signinButtonInitial);
+            //FindViewById<Button>(Resource.Id.signinButtonInitial).Click += (e, o) =>
+
+            
+
 
         }
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
-        {
-            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
-            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
     }
 }

@@ -12,22 +12,22 @@
         android:src="@drawable/puppygold"
         android:scaleType="centerCrop" 
     />
-        <LinearLayout
-            android:orientation="vertical"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:src="@drawable/LogoWhite"
+            android:id="@+id/logoLogin" >
+        </ImageView>
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp"
-                    android:src="@drawable/LogoWhite"
-                    android:id="@+id/logoLogin" >
-                </ImageView>
-
-        </LinearLayout>
+    </LinearLayout>
         <RelativeLayout
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="50dp"
