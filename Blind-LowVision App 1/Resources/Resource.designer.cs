@@ -3159,7 +3159,7 @@ namespace Blind_LowVision_App_1
 			public const int ic_mtrl_chip_close_circle = 2131165286;
 			
 			// aapt resource value: 0x7F070067
-			public const int logininitial = 2131165287;
+			public const int loginbutton = 2131165287;
 			
 			// aapt resource value: 0x7F070068
 			public const int LogoWhite = 2131165288;
@@ -3216,7 +3216,7 @@ namespace Blind_LowVision_App_1
 			public const int rectangleLogin = 2131165305;
 			
 			// aapt resource value: 0x7F07007A
-			public const int signupinitial = 2131165306;
+			public const int signupbutton = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
 			public const int tooltip_frame_dark = 2131165307;
@@ -3478,43 +3478,43 @@ namespace Blind_LowVision_App_1
 			public const int image = 2131230802;
 			
 			// aapt resource value: 0x7F080053
-			public const int imageView1 = 2131230803;
+			public const int info = 2131230803;
 			
 			// aapt resource value: 0x7F080054
-			public const int info = 2131230804;
+			public const int italic = 2131230804;
 			
 			// aapt resource value: 0x7F080055
-			public const int italic = 2131230805;
+			public const int item_touch_helper_previous_elevation = 2131230805;
 			
 			// aapt resource value: 0x7F080056
-			public const int item_touch_helper_previous_elevation = 2131230806;
+			public const int labeled = 2131230806;
 			
 			// aapt resource value: 0x7F080057
-			public const int labeled = 2131230807;
+			public const int largeLabel = 2131230807;
 			
 			// aapt resource value: 0x7F080058
-			public const int largeLabel = 2131230808;
+			public const int left = 2131230808;
 			
 			// aapt resource value: 0x7F080059
-			public const int left = 2131230809;
+			public const int line1 = 2131230809;
 			
 			// aapt resource value: 0x7F08005A
-			public const int line1 = 2131230810;
+			public const int line3 = 2131230810;
 			
 			// aapt resource value: 0x7F08005B
-			public const int line3 = 2131230811;
-			
-			// aapt resource value: 0x7F08005C
-			public const int linearLayout1 = 2131230812;
+			public const int listMode = 2131230811;
 			
 			// aapt resource value: 0x7F08005D
-			public const int listMode = 2131230813;
+			public const int listview_background_shape = 2131230813;
 			
-			// aapt resource value: 0x7F08005F
-			public const int listview_background_shape = 2131230815;
+			// aapt resource value: 0x7F08005C
+			public const int list_item = 2131230812;
 			
 			// aapt resource value: 0x7F08005E
-			public const int list_item = 2131230814;
+			public const int loginButtonInitial = 2131230814;
+			
+			// aapt resource value: 0x7F08005F
+			public const int logoLogin = 2131230815;
 			
 			// aapt resource value: 0x7F080060
 			public const int masked = 2131230816;
@@ -3589,94 +3589,94 @@ namespace Blind_LowVision_App_1
 			public const int radio = 2131230838;
 			
 			// aapt resource value: 0x7F080077
-			public const int relativeLayout1 = 2131230839;
+			public const int right = 2131230839;
 			
 			// aapt resource value: 0x7F080078
-			public const int right = 2131230840;
+			public const int right_icon = 2131230840;
 			
 			// aapt resource value: 0x7F080079
-			public const int right_icon = 2131230841;
+			public const int right_side = 2131230841;
 			
 			// aapt resource value: 0x7F08007A
-			public const int right_side = 2131230842;
+			public const int save_image_matrix = 2131230842;
 			
 			// aapt resource value: 0x7F08007B
-			public const int save_image_matrix = 2131230843;
+			public const int save_non_transition_alpha = 2131230843;
 			
 			// aapt resource value: 0x7F08007C
-			public const int save_non_transition_alpha = 2131230844;
+			public const int save_scale_type = 2131230844;
 			
 			// aapt resource value: 0x7F08007D
-			public const int save_scale_type = 2131230845;
+			public const int screen = 2131230845;
 			
 			// aapt resource value: 0x7F08007E
-			public const int screen = 2131230846;
-			
-			// aapt resource value: 0x7F08007F
-			public const int scroll = 2131230847;
-			
-			// aapt resource value: 0x7F080083
-			public const int scrollable = 2131230851;
-			
-			// aapt resource value: 0x7F080080
-			public const int scrollIndicatorDown = 2131230848;
-			
-			// aapt resource value: 0x7F080081
-			public const int scrollIndicatorUp = 2131230849;
+			public const int scroll = 2131230846;
 			
 			// aapt resource value: 0x7F080082
-			public const int scrollView = 2131230850;
+			public const int scrollable = 2131230850;
+			
+			// aapt resource value: 0x7F08007F
+			public const int scrollIndicatorDown = 2131230847;
+			
+			// aapt resource value: 0x7F080080
+			public const int scrollIndicatorUp = 2131230848;
+			
+			// aapt resource value: 0x7F080081
+			public const int scrollView = 2131230849;
+			
+			// aapt resource value: 0x7F080083
+			public const int search_badge = 2131230851;
 			
 			// aapt resource value: 0x7F080084
-			public const int search_badge = 2131230852;
+			public const int search_bar = 2131230852;
 			
 			// aapt resource value: 0x7F080085
-			public const int search_bar = 2131230853;
+			public const int search_button = 2131230853;
 			
 			// aapt resource value: 0x7F080086
-			public const int search_button = 2131230854;
+			public const int search_close_btn = 2131230854;
 			
 			// aapt resource value: 0x7F080087
-			public const int search_close_btn = 2131230855;
+			public const int search_edit_frame = 2131230855;
 			
 			// aapt resource value: 0x7F080088
-			public const int search_edit_frame = 2131230856;
+			public const int search_go_btn = 2131230856;
 			
 			// aapt resource value: 0x7F080089
-			public const int search_go_btn = 2131230857;
+			public const int search_mag_icon = 2131230857;
 			
 			// aapt resource value: 0x7F08008A
-			public const int search_mag_icon = 2131230858;
+			public const int search_plate = 2131230858;
 			
 			// aapt resource value: 0x7F08008B
-			public const int search_plate = 2131230859;
+			public const int search_src_text = 2131230859;
 			
 			// aapt resource value: 0x7F08008C
-			public const int search_src_text = 2131230860;
-			
-			// aapt resource value: 0x7F08008D
-			public const int search_voice_btn = 2131230861;
-			
-			// aapt resource value: 0x7F08008F
-			public const int selected = 2131230863;
+			public const int search_voice_btn = 2131230860;
 			
 			// aapt resource value: 0x7F08008E
-			public const int select_dialog_listview = 2131230862;
+			public const int selected = 2131230862;
+			
+			// aapt resource value: 0x7F08008D
+			public const int select_dialog_listview = 2131230861;
 			
 			// aapt resource value: 0x7F080004
 			public const int SHIFT = 2131230724;
 			
+			// aapt resource value: 0x7F08008F
+			public const int shortcut = 2131230863;
+			
 			// aapt resource value: 0x7F080090
-			public const int shortcut = 2131230864;
+			public const int showCustom = 2131230864;
 			
 			// aapt resource value: 0x7F080091
-			public const int showCustom = 2131230865;
+			public const int showHome = 2131230865;
 			
 			// aapt resource value: 0x7F080092
-			public const int showHome = 2131230866;
+			public const int showTitle = 2131230866;
 			
 			// aapt resource value: 0x7F080093
-			public const int showTitle = 2131230867;
+			public const int signinButtonInitial = 2131230867;
 			
 			// aapt resource value: 0x7F080094
 			public const int smallLabel = 2131230868;

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -16,22 +15,18 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/linearLayout1">
-            <RelativeLayout
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:id="@+id/relativeLayout1">
+            android:layout_height="wrap_content">
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/logowhite"
-                    android:id="@+id/imageView1" >
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:src="@drawable/LogoWhite"
+                    android:id="@+id/logoLogin" >
                 </ImageView>
 
-            </RelativeLayout>
         </LinearLayout>
         <RelativeLayout
             android:layout_alignParentBottom="true"
@@ -43,30 +38,35 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:layout_alignParentTop="true">   
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/signupinitial"
-                    android:background="#00000000"
-                    android:paddingBottom="15dp"
-                    android:scaleType="centerInside" 
+                android:layout_alignParentTop="true">
+            <Button
+                android:id="@+id/signinButtonInitial"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/signupbutton"
+                android:text="SIGN UP"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_alignParentBottom="true">   
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/logininitial"
-                    android:background="#00000000"
-                    android:paddingTop="15dp"
-                    android:scaleType="centerInside"                 
-                />
+                <Button
+                    android:id="@+id/loginButtonInitial"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/loginbutton"
+                    android:text="LOGIN"
+                    android:textColor="#F36E36"
+                    android:textSize="18dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    />
             </LinearLayout>
         </RelativeLayout>
-
 
 </RelativeLayout>
