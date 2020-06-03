@@ -20,7 +20,9 @@ namespace Blind_LowVision_App_1
             SetContentView(Resource.Layout.SignIn);
 
             //signInButton = FindViewById<Button>(Resource.Id.signinButtonInitial);
-            //FindViewById<Button>(Resource.Id.signinButtonInitial).Click += (e, o) =>
+            FindViewById<Button>(Resource.Id.signinButtonInitial).Click += (e, o) => {
+                StartActivity(typeof(Carousel));
+            };
 
             
 

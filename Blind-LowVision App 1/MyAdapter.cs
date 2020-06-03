@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
+﻿using System.Collections.Generic;
 using Android.Content;
-using Android.OS;
-using Android.Runtime;
 using Android.Support.V4.View;
 using Android.Views;
 using Android.Widget;
 
 //https://www.youtube.com/watch?v=xlHQv2150wU&ab_channel=EDMTDev
+//https://github.com/mohibsheth/CarouselView
 namespace Blind_LowVision_App_1
 {
     public class MyAdapter : PagerAdapter
