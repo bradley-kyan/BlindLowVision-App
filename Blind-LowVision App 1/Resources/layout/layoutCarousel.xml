@@ -1,6 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Blind-LowVision Application"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,17 +10,16 @@
 
             
         
-        <com.gigamole.infinitecycleviewpager.HorizontalInfiniteCycleViewPager
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/horizontal_viewpager"
-            app:icvp_interpolator="@android:anim/accelerate_decelerate_interpolator"
-            app:icvp_center_page_scale_offset="30dp"
-            app:icvp_min_page_scale_offset="5dp"
-            app:icvp_scroll_duration="250"
-            app:icvp_max_page_scale="0.8"
-            app:icvp_min_page_scale="0.55"
-            app:icvp_medium_scaled="false" 
-        />
+    <carouselview.CarouselView
+        android:id="@+id/carouselView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:fillColor="#FFFFFFFF"
+        app:pageColor="#00000000"
+        app:radius="6dp"
+        app:slideInterval="3000"
+        app:strokeColor="#FF777777"
+        app:strokeWidth="1dp"/>
+        
 
 </LinearLayout>

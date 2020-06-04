@@ -2,43 +2,42 @@
 using Android.Content;
 using Android.Support.V4.View;
 using Android.Views;
+using CarouselView;
 using Android.Widget;
+using System;
+using Android.Support.V7.App;
+using Android.OS;
 
 //https://www.youtube.com/watch?v=xlHQv2150wU&ab_channel=EDMTDev
 //https://github.com/mohibsheth/CarouselView
 namespace Blind_LowVision_App_1
 {
-    public class MyAdapter : PagerAdapter
-    {
-        List<int> listImages;
-        Context context;
-        LayoutInflater layoutInflater;
+	public class MyAdapter : AppCompatActivity
+	{
+		public static int[] SampleImages = { Resource.Drawable.puppygold, Resource.Drawable.puppygold, Resource.Drawable.puppygold };
 
-        public MyAdapter(List<int> listImages, Context context)
-        {
-            this.listImages = listImages;
-            this.context = context;
-            layoutInflater = LayoutInflater.From(context);
-        }
+		CarouselView.CarouselView _carouselView;
 
-        public override Java.Lang.Object InstantiateItem(ViewGroup container, int position)
-        {
-            View view = layoutInflater.Inflate(Resource.Layout.Card_Layout, container, false);
-            ImageView imgView = view.FindViewById<ImageView>(Resource.Id.imageView2);
+		protected override void OnCreate(Bundle savedInstanceState)
+		{
+			base.OnCreate(savedInstanceState);
+			SetContentView(Resource.Layout.layoutCarousel);
+			this._carouselView = (CarouselView.CarouselView)FindViewById(Resource.Id.carouselView);
+			this._carouselView.SetImageListener(new SampleImageListener());
+			this._carouselView.SetPageCount(SampleImages.Length);
+		}
 
-            container.AddView(view);
-            return view;
-        }
+		private void SetContentView(object layoutCarousel)
+		{
+			throw new NotImplementedException();
+		}
+	}
 
-        public override int Count => listImages.Count;
-
-        public override bool IsViewFromObject(View view, Java.Lang.Object @object)
-        {
-            return view.Equals(@object);
-        }
-        public override void DestroyItem(ViewGroup container, int position, Java.Lang.Object @object)
-        {
-            container.RemoveView((View)@object);
-        }
-    }
+	public class SampleImageListener : Java.Lang.Object, IImageListener
+	{
+		public void SetImageForPosition(int position, ImageView imageView)
+		{
+			imageView.SetImageResource(MyAdapter.SampleImages[position]);
+		}
+	}
 }
