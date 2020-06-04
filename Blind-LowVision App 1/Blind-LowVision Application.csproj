@@ -177,6 +177,12 @@
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CarouselView\CarouselView.csproj">
+      <Project>{0c2d0c3b-dffd-4fd6-b176-d5b2eaf8dd68}</Project>
+      <Name>CarouselView</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
     Other similar extension points exist, see Microsoft.Common.targets.
