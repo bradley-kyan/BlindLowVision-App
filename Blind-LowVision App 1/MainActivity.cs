@@ -20,7 +20,7 @@ namespace Blind_LowVision_App_1
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.SignIn);
 
-            //signInButton = FindViewById<Button>(Resource.Id.signinButtonInitial);
+            //Starts Actvity after login successful
             FindViewById<Button>(Resource.Id.signinButtonInitial).Click += (e, o) => {
                 StartActivity(typeof(MyAdapter));
             };

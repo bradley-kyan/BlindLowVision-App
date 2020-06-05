@@ -79,6 +79,7 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LoginActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MyAdapter.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
@@ -119,6 +120,9 @@
     <AndroidResource Include="Resources\drawable\puppygold.png" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Auth0.OidcClient.Android">
+      <Version>3.1.3</Version>
+    </PackageReference>
     <PackageReference Include="Xam.Plugins.Android.InfiniteCycleViewPager">
       <Version>1.0.2</Version>
     </PackageReference>
@@ -182,6 +186,14 @@
       <Project>{0c2d0c3b-dffd-4fd6-b176-d5b2eaf8dd68}</Project>
       <Name>CarouselView</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Login.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\next.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
