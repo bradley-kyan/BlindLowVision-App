@@ -12,9 +12,8 @@
         android:layout_marginTop="50dp">  
         <FrameLayout 
             android:layout_width="match_parent" 
-            android:layout_height="wrap_content" 
-            android:background="@drawable/login_top">  
-            <LinearLayout 
+            android:layout_height="wrap_content" >
+            <LinearLayout
                 android:layout_width="match_parent" 
                 android:layout_height="wrap_content" 
                 android:orientation="vertical" 
@@ -30,13 +29,12 @@
                     android:layout_marginTop="40dp" 
                     android:layout_width="match_parent" 
                     android:layout_height="wrap_content" 
-                    android:hint="Password" 
-                    android:inputType="textPassword" /> 
+                    android:hint="Password" />
             </LinearLayout>  
         </FrameLayout>  
-        <FrameLayout android:layout_width="match_parent" 
-            android:layout_height="wrap_content" 
-            android:background="@drawable/login_bottom">  
+        <FrameLayout 
+            android:layout_width="match_parent" 
+            android:layout_height="wrap_content" >
             <android.support.design.widget.FloatingActionButton 
                 android:id="@+id/btnLogin" 
                 android:layout_width="wrap_content" 

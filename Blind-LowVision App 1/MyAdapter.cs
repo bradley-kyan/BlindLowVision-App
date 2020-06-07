@@ -7,14 +7,17 @@ using Android.Widget;
 using System;
 using Android.Support.V7.App;
 using Android.OS;
+using Android.App;
 
 //https://www.youtube.com/watch?v=xlHQv2150wU&ab_channel=EDMTDev
 //https://github.com/mohibsheth/CarouselView
 namespace Blind_LowVision_App_1
 {
+	[Activity(Label = "Blind+LowVision", Theme = "@style/AppTheme", MainLauncher = false)]
+
 	public class MyAdapter : AppCompatActivity
 	{
-		public static int[] SampleImages = { Resource.Drawable.puppygold, Resource.Drawable.puppygold, Resource.Drawable.puppygold };
+		public static int[] Images = { Resource.Drawable.puppygold, Resource.Drawable.puppygold, Resource.Drawable.puppygold };
 
 		CarouselView.CarouselView _carouselView;
 
@@ -23,21 +26,16 @@ namespace Blind_LowVision_App_1
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.layoutCarousel);
 			this._carouselView = (CarouselView.CarouselView)FindViewById(Resource.Id.carouselView);
-			this._carouselView.SetImageListener(new SampleImageListener());
-			this._carouselView.SetPageCount(SampleImages.Length);
-		}
-
-		private void SetContentView(object layoutCarousel)
-		{
-			throw new NotImplementedException();
+			this._carouselView.SetImageListener(new ImageListener());
+			this._carouselView.SetPageCount(Images.Length);
 		}
 	}
 
-	public class SampleImageListener : Java.Lang.Object, IImageListener
+	public class ImageListener : Java.Lang.Object, IImageListener
 	{
 		public void SetImageForPosition(int position, ImageView imageView)
 		{
-			imageView.SetImageResource(MyAdapter.SampleImages[position]);
+			imageView.SetImageResource(MyAdapter.Images[position]);
 		}
 	}
 }

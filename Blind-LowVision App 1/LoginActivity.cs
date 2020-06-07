@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using Auth0.OidcClient;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -16,11 +16,12 @@ using Android.Widget;
 namespace Blind_LowVision_App_1
 {
     [Activity(Label = "LoginActivity")]
+    
     public class LoginActivity : Activity
     {
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);
 
             // Create your application here
         }

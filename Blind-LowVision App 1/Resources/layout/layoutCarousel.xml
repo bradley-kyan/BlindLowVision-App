@@ -8,18 +8,27 @@
     android:layout_height="match_parent"
     android:background="#F36E36">
 
-            
-        
+
     <carouselview.CarouselView
         android:id="@+id/carouselView"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="400dp"
         app:fillColor="#FFFFFFFF"
         app:pageColor="#00000000"
         app:radius="6dp"
-        app:slideInterval="3000"
+        app:slideInterval="6000"
         app:strokeColor="#FF777777"
-        app:strokeWidth="1dp"/>
-        
+        app:strokeWidth="1dp"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="#Note: Remember To Update"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"/>
 
 </LinearLayout>
