@@ -15,10 +15,8 @@ using Auth0.Xamarin.Droid.Model;
 //https://www.youtube.com/watch?v=5CgQUbnf1Qk&ab_channel=ResoCoder
 namespace Blind_LowVision_App_1
 {
-    [Activity(Label = "@string/app_name", MainLauncher = true,
-    LaunchMode = LaunchMode.SingleTask)]
-    [IntentFilter(
-    new[] { Intent.ActionView },
+    [Activity(Label = "@string/app_name", MainLauncher = true, LaunchMode = LaunchMode.SingleTask)]
+    [IntentFilter(new[] { Intent.ActionView },
     Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable },
     DataScheme = "com.aci.blindlowvision",
     DataHost = "dev-ta0k74kn.auth0.com",
@@ -56,7 +54,15 @@ namespace Blind_LowVision_App_1
         {
             var loginResult = await _auth0Client.LoginAsync();
 
-            if (!loginResult.IsError)
+            if (loginResult.IsError)
+            {
+                SetContentView(Resource.Layout.errorLogin);
+                Console.WriteLine(loginResult.Error);
+                Console.WriteLine("Exiting Applicatiion");
+                FinishAffinity();
+
+            }
+            else
             {
                 var name = loginResult.User.FindFirst(c => c.Type == "name")?.Value;
                 var email = loginResult.User.FindFirst(c => c.Type == "email")?.Value;
@@ -73,10 +79,6 @@ namespace Blind_LowVision_App_1
                 var serializedLoginResponse = JsonConvert.SerializeObject(userProfile);
                 intent.PutExtra("LoginResult", serializedLoginResponse);
                 StartActivity(intent);
-            }
-            else
-            {
-                Console.WriteLine($"An error occurred during login: {loginResult.Error}");
             }
         }
 
