@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F36E36">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -12,18 +13,20 @@
         <ImageView
             android:layout_gravity="center"
             android:layout_marginTop="26dp"
-            android:minWidth="25px"
-            android:minHeight="25px"
+            android:minWidth="60dp"
+            android:minHeight="60dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/userProfileImageView"/>
+            android:id="@+id/userProfileImageView"
+            android:src="@drawable/loginbutton" />
         <TextView
             android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello!"
+            android:text="Welcome Back"
+            android:textColor="#FFFFFF"
             android:textStyle="bold"
-            android:layout_marginTop="26dp"
+            android:layout_marginTop="60dp"
             android:gravity="center"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
@@ -34,21 +37,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="Username..."
-            android:layout_marginTop="26dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="40dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:id="@+id/userProfileNameTextView"/>
-         <TextView
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:text="Email..."
-            android:layout_marginTop="26dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:id="@+id/userProfileEmailTextView"/>
     </LinearLayout>
 </RelativeLayout>

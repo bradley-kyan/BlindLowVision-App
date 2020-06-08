@@ -1,10 +1,5 @@
-﻿using System.Collections.Generic;
-using Android.Content;
-using Android.Support.V4.View;
-using Android.Views;
-using CarouselView;
+﻿using CarouselView;
 using Android.Widget;
-using System;
 using Android.Support.V7.App;
 using Android.OS;
 using Android.App;

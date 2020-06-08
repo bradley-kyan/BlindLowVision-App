@@ -1,5 +1,4 @@
 ﻿using System.Net;
-using Android;
 using Android.App;
 using Android.Content;
 using Android.Graphics;
@@ -7,6 +6,8 @@ using Android.OS;
 using Android.Widget;
 using Auth0.Xamarin.Droid.Model;
 using Newtonsoft.Json;
+using Android.Support.V7.App;
+
 
 namespace Blind_LowVision_App_1
 {
@@ -20,24 +21,20 @@ namespace Blind_LowVision_App_1
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_user_profile);
             GetLoginResult(savedInstanceState);
+
             DisplayProfileInfo();
         }
-
         private void GetLoginResult(Bundle savedInstanceState)
         {
             string loginResultAsJson = Intent.GetStringExtra("LoginResult") ?? string.Empty;
             _userProfile = JsonConvert.DeserializeObject<UserProfile>(loginResultAsJson);
         }
-
         private void DisplayProfileInfo()
         {
             FindViewById<TextView>(Resource.Id.userProfileNameTextView).Text = _userProfile.Name;
-            FindViewById<TextView>(Resource.Id.userProfileEmailTextView).Text = _userProfile.Email;
-
             var imageBitmap = GetImageBitmapFromUrl(_userProfile.ProfilePictureUrl);
             FindViewById<ImageView>(Resource.Id.userProfileImageView).SetImageBitmap(imageBitmap);
         }
-
         private Bitmap GetImageBitmapFromUrl(string url)
         {
             Bitmap imageBitmap = null;
@@ -50,7 +47,6 @@ namespace Blind_LowVision_App_1
                     imageBitmap = BitmapFactory.DecodeByteArray(imageBytes, 0, imageBytes.Length);
                 }
             }
-
             return imageBitmap;
         }
     }

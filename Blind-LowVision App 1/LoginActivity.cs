@@ -9,6 +9,8 @@ using Auth0.OidcClient;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
 using Auth0.Xamarin.Droid.Model;
+using Android.Support.V7.App;
+using StartUpDecisions;
 
 
 
@@ -22,16 +24,23 @@ namespace Blind_LowVision_App_1
     DataHost = "dev-ta0k74kn.auth0.com",
     DataPathPrefix = "/android/com.aci.blindlowvision/callback")]
 
-    public class MainActivity : Activity
-    {
+    public class LoginActivity : Auth0ClientActivity
+    { 
         private Auth0Client _auth0Client;
+
+
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            //Auth0 client details for callbacks
+
             _auth0Client = new Auth0Client(new Auth0ClientOptions
             {
                 Domain = "dev-ta0k74kn.auth0.com",
                 ClientId = "C40Vt95xT8vI1Ugjc5xTw5oOOjpNmwCP"
             });
+            
+            //Button events to call Auth0
 
             SetContentView(Resource.Layout.SignIn);
             base.OnCreate(savedInstanceState);
@@ -40,10 +49,11 @@ namespace Blind_LowVision_App_1
             var loginButton = FindViewById<Button>(Resource.Id.loginButtonInitial);
             loginButton.Click += LoginButton_Click;
 
-            //Starts Actvity after login successful
-            FindViewById<Button>(Resource.Id.signinButtonInitial).Click += (e, o) => {
-                StartActivity(typeof(MyAdapter));
+            FindViewById<Button>(Resource.Id.signinButtonInitial).Click += (e, o) =>
+            {
+                _auth0Client.LogoutAsync();
             };
+
 
         }
         private async void LoginButton_Click(object sender, System.EventArgs e)
@@ -54,15 +64,7 @@ namespace Blind_LowVision_App_1
         {
             var loginResult = await _auth0Client.LoginAsync();
 
-            if (loginResult.IsError)
-            {
-                SetContentView(Resource.Layout.errorLogin);
-                Console.WriteLine(loginResult.Error);
-                Console.WriteLine("Exiting Applicatiion");
-                FinishAffinity();
-
-            }
-            else
+            if (!loginResult.IsError)
             {
                 var name = loginResult.User.FindFirst(c => c.Type == "name")?.Value;
                 var email = loginResult.User.FindFirst(c => c.Type == "email")?.Value;
@@ -74,17 +76,18 @@ namespace Blind_LowVision_App_1
                     Name = name,
                     ProfilePictureUrl = image
                 };
-
                 var intent = new Intent(this, typeof(UserProfileActivity));
                 var serializedLoginResponse = JsonConvert.SerializeObject(userProfile);
                 intent.PutExtra("LoginResult", serializedLoginResponse);
                 StartActivity(intent);
+                
+            }
+            else
+            {
+                string toastMsg = "Sign In Failed...";
+                ToastNotification.TostMessageShort(toastMsg);
             }
         }
 
-        private async Task<BrowserResultType> LogoutAsync()
-        {
-            return await _auth0Client.LogoutAsync();
-        }
     }
 }
