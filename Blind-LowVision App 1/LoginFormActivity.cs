@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 
 using Android.App;
@@ -11,6 +12,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Newtonsoft.Json;
 
 namespace Blind_LowVision_App_1
 {
@@ -24,25 +26,41 @@ namespace Blind_LowVision_App_1
             SetContentView(Resource.Layout.loginForm);
 
 
-            var username = FindViewById<EditText>(Resource.Id.textUname).Text;
-            var password = FindViewById<EditText>(Resource.Id.textPass).Text;
-
             var loginBtn = FindViewById<Button>(Resource.Id.loginPostButton);
 
             loginBtn.Click += (e, o) =>
-            sendLoginPhp(username,password);
+            {
+                var username = FindViewById<EditText>(Resource.Id.textUname).Text;
+                var password = FindViewById<EditText>(Resource.Id.textPass).Text;
+                sendLoginPhp(username, password);
+            };
         }
-        void sendLoginPhp(string username, string password)
+        private async void sendLoginPhp(string username, string password)
         {
+            var postParams = new Dictionary<string, string>();
+            postParams.Add("Username", username);
+            postParams.Add("Password", password);
+            var data = new FormUrlEncodedContent(postParams);
 
-            WebClient client = new WebClient();
-            Uri uri = new Uri("http://localhost/xamlogin.php");
-            NameValueCollection parameters = new NameValueCollection();
+            var client = new HttpClient();
+            var uri = "http://192.168.1.10/appLogin.php";
 
-            parameters.Add("Username", username);
-            parameters.Add("Password", password);
-            Toast.MakeText(this, $"Username {username} Password {password}", ToastLength.Long).Show();
+       
+            var response = await client.PostAsync(uri, data);
+            string result = response.Content.ReadAsStringAsync().Result;
 
+            if(result == "200")
+            {
+                Toast.MakeText(this, "Login Successful", ToastLength.Long).Show();
+                client.Dispose();
+                StartActivity(typeof(ScanActivity));
+                Finish();
+            }
+            else
+            {
+                Toast.MakeText(this, "Login Unsuccessful", ToastLength.Long).Show();
+                client.Dispose();
+            }
         }
 
     }
