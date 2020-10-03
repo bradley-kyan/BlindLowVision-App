@@ -80,12 +80,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LoginActivity.cs" />
-    <Compile Include="MyAdapter.cs" />
+    <Compile Include="loginDB.cs" />
+    <Compile Include="LoginFormActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ToastNotifications.cs" />
-    <Compile Include="UserProfile-redundant.cs" />
-    <Compile Include="UserProfileActivity-redundant.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -105,17 +103,8 @@
     <AndroidResource Include="Resources\drawable\puppygold.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Auth0.Core">
-      <Version>7.0.8</Version>
-    </PackageReference>
-    <PackageReference Include="Auth0.OidcClient.Android">
-      <Version>3.1.3</Version>
-    </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.3</Version>
-    </PackageReference>
-    <PackageReference Include="Xam.Plugins.Android.InfiniteCycleViewPager">
-      <Version>1.0.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Compat">
       <Version>28.0.0.3</Version>
@@ -149,28 +138,6 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\loginbutton.xml">
       <Generator>MSBuild:UpdateGeneratedFiles</Generator>
-      <SubType>Designer</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\layoutCarousel.xml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\Card_Layout.xml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CarouselView\CarouselView.csproj">
-      <Project>{0c2d0c3b-dffd-4fd6-b176-d5b2eaf8dd68}</Project>
-      <Name>CarouselView</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\activity_user_profile.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
@@ -221,6 +188,14 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\loginForm.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\loginbuttonSecond.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
