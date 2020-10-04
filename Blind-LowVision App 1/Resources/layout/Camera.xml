@@ -7,19 +7,20 @@
     <EDMTDev.ZXingXamarinAndroid.ZXingScannerView
         android:id="@+id/zxscan"
         android:layout_above="@+id/layout_result"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-	<LinearLayout
-		android:id="@+id/layout_result"
-		android:layout_alignParentBottom="true"
 		android:background="@android:color/transparent"
-		android:orientation="vertical"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>		
 		
+		
+		<RelativeLayout
+			android:background="@android:color/transparent"
+			android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 		<Button
 			android:id="@+id/qrButton"
-			android:layout_gravity="center"
+			android:layout_alignParentBottom="true"
+			android:gravity="center"
 			android:textColor="#FFFFFF"
 			android:background="@drawable/loginbuttonSecond"
 			android:textSize="15dp"
@@ -27,7 +28,6 @@
 			android:layout_width="300dp"
 			android:layout_height="40dp"
 			android:layout_marginBottom="30dp"/>
-		
-	</LinearLayout>
+	</RelativeLayout>
 	
 </RelativeLayout>
