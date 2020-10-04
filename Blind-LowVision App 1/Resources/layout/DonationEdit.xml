@@ -1,0 +1,86 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="35dp"
+        android:text="Firstname, Lastname"
+        android:id="@+id/UserInformation"
+        android:padding="10dp"/>
+    
+        <View 
+        android:id="@+id/separator" 
+        android:background="@android:color/darker_gray" 
+        android:layout_width = "fill_parent"
+        android:layout_height="1dip"
+        android:layout_centerVertical ="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"/>
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:text="Choose Reward"
+        android:padding="10dp"/>
+        
+        <RadioGroup
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup1">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="RadioButton"
+            android:id="@+id/radioButton1" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RadioButton"
+            android:id="@+id/radioButton2" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RadioButton"
+            android:id="@+id/radioButton3" />
+    </RadioGroup>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="20dp">
+        <Button
+		android:id="@+id/confirmButton"
+		android:textColor="#FFFFFF"
+		android:background="@drawable/loginbuttonSecond"
+		android:textSize="15dp"
+		android:text="Confirm"
+		android:layout_width="150dp"
+		android:layout_height="40dp"
+		android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+        <Button
+		android:id="@+id/cancelButton"
+		android:textColor="#FFFFFF"
+		android:background="@drawable/loginbuttonSecond"
+		android:textSize="15dp"
+		android:text="Cancel"
+		android:layout_width="150dp"
+		android:layout_height="40dp"
+		android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+    </LinearLayout>
+
+</LinearLayout>

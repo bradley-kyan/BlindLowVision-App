@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using Android;
 using Android.App;
 using Android.Content;
@@ -21,10 +22,7 @@ namespace Blind_LowVision_App_1
     {   //https://www.youtube.com/watch?v=S78S3z6BT88&ab_channel=EDMTDev
         
         private ZXingScannerView scannerView;
-        private ToastLength tlength;
-
-        public string txtResult { get; set; }
-
+        private ToastLength tlength; 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -90,6 +88,24 @@ namespace Blind_LowVision_App_1
                 Toast.MakeText(this, $"{errorMsg}", tlength).Show(); 
             }
             
+        } 
+        public void ViewController(string location)
+        {
+            switch (location)
+            {
+                case "DonationEdit":
+                    SetContentView(Resource.Layout.DonationEdit);
+                    break;
+                case "loginForm":
+                    SetContentView(Resource.Layout.loginForm);
+                    break;
+                case "Camera":
+                    SetContentView(Resource.Layout.Camera);
+                    break;
+                case "SignIn":
+                    SetContentView(Resource.Layout.SignIn);
+                    break;
+            }
         }
         public void restartActivity()
         {
@@ -111,9 +127,19 @@ namespace Blind_LowVision_App_1
                 ProcessResult(rawResult.Text);
             }
 
-            private void ProcessResult(string text) 
-            { 
-                scanActivity.OnToastCreate(text, "short");
+            private async void ProcessResult(string text) 
+            {
+                string status = await QrVerification.QrCheck(text);
+                if(status == "200")
+                {
+                    string value = "DonationEdit";
+                    scanActivity.ViewController(value);
+                }
+                else
+                {
+                    string value = "DonationEdit";
+                    scanActivity.ViewController(value);
+                }
             }
         }
     }
