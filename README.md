@@ -16,7 +16,7 @@ To reporoduce this project the following are needed:
 <li>MSSQL Server
 <li>Visual Studio 2019
 <li><a href="https://visualstudio.microsoft.com/xamarin/">Xamarin</a> package for Visual Studio
-  <li>Windows HyperV enabled<br><i>See <a href="#info"><b>info</b></a> for details on how to enable HyperV
+  <li>Windows HyperV enabled<br><i>See <a href="#info"><b>info</b></a> for details on how to enable HyperV</i>
 <li><a href="https://github.com/bradley-kyan/BlindLowVision-Web">BlindLowVision-Web</a> repository</ul>
 
 *It must be noted that the php scripts connection strings for the MSSQL database in this repository will need to be changed to your database*
