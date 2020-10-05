@@ -3,7 +3,7 @@ Blind &amp; Low Vision fundraising landing page + database -- as91896 - 2.7<br/>
 ***Coded by <a href="https://github.com/bradley-kyan" title="bradley-kyan Github">Kyan Bradley</a> of [Avondale College](https://www.avcol.school.nz/)***
 
 ## Overview ##
-This project is part of a solo assesment for NCEA LVL 2 soley created by Kyan Bradley of Avondale College. This repository contains the website for as91897 and the MSSQL queries to required properly reproduce the project.
+This project is part of a solo assesment for NCEA LVL 2 soley created by Kyan Bradley of Avondale College. This repository contains the application for as91896 and the MSSQL queries to required properly reproduce the project.
 This project is dependent on the BlindLowVision-Web (as91897-2.8 + as91892 - 2.3) repository.
 <hr>
 
@@ -15,7 +15,8 @@ To reporoduce this project the following are needed:
 <li>Reliable internet connetion
 <li>MSSQL Server
 <li>Visual Studio 2019
-  <li><a href="https://visualstudio.microsoft.com/xamarin/">Xamarin</a> package for Visual Studio</ul>
+  <li><a href="https://visualstudio.microsoft.com/xamarin/">Xamarin</a> package for Visual Studio
+<li><a href="https://github.com/bradley-kyan/BlindLowVision-Web">BlindLowVision-Web</a> repository</ul>
 
 *It must be noted that the php scripts connection strings for the MSSQL database in this repository will need to be changed to your database*
 
