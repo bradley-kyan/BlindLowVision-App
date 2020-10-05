@@ -19,8 +19,7 @@ namespace Blind_LowVision_App_1
 {
     [Activity(Label = "ScanActivity")]
     public class ScanActivity : Activity,IPermissionListener
-    {   //https://www.youtube.com/watch?v=S78S3z6BT88&ab_channel=EDMTDev
-        
+    {        
         private ZXingScannerView scannerView;
         private ToastLength tlength; 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -43,7 +42,7 @@ namespace Blind_LowVision_App_1
         public void OnPermissionDenied(PermissionDeniedResponse p0)
         {
             string msg = "You must enable permissions";
-            OnToastCreate(msg, "long");
+            OnToastCreate(msg, true);
             
         }
 
@@ -62,26 +61,24 @@ namespace Blind_LowVision_App_1
         {
 
         }
-        //Toast creation
-        public void OnToastCreate(string errorMsg, string length)
+
+        /// <summary>Void <c>OnToastCreate</c> creates a toast notification from inputted variables.
+        /// Length == True -> Toast duration is long, Lenth == False -> Toast duration is short.</summary>
+        public void OnToastCreate(string errorMsg, bool length)
         {
             switch(length)
             {
-                case "long":
+                case true:
                     tlength = ToastLength.Long;
                     break;
 
-                case "short":
+                case false:
                     tlength = ToastLength.Short;
-                    break;
-
-                default:
-                    tlength = ToastLength.Long;
                     break;
             }
             if(errorMsg == null)
             {
-                Toast.MakeText(this, "Invalid QR Code", tlength).Show();
+                Toast.MakeText(this, "Undefined Message", tlength).Show();
             }
             else 
             { 
@@ -89,28 +86,15 @@ namespace Blind_LowVision_App_1
             }
             
         } 
-        public void ViewController(string location)
-        {
-            switch (location)
-            {
-                case "DonationEdit":
-                    SetContentView(Resource.Layout.DonationEdit);
-                    break;
-                case "loginForm":
-                    SetContentView(Resource.Layout.loginForm);
-                    break;
-                case "Camera":
-                    SetContentView(Resource.Layout.Camera);
-                    break;
-                case "SignIn":
-                    SetContentView(Resource.Layout.SignIn);
-                    break;
-            }
-        }
+        
         public void restartActivity()
         {
             Finish();
             StartActivity(typeof(ScanActivity));
+        }
+        public void gotoDonationEditActivity()
+        {
+            StartActivity(typeof(DonationEditActivity));
         }
 
         public class MyResultHandler : IResultHandler
@@ -129,16 +113,16 @@ namespace Blind_LowVision_App_1
 
             private async void ProcessResult(string text) 
             {
-                string status = await QrVerification.QrCheck(text);
-                if(status == "200")
+                string data = await QrVerification.QrCheck(text);
+                if(data == null)
                 {
-                    string value = "DonationEdit";
-                    scanActivity.ViewController(value);
+                    scanActivity.OnToastCreate("QR or UserID is invalid", false);
                 }
                 else
                 {
-                    string value = "DonationEdit";
-                    scanActivity.ViewController(value);
+                    GetName.FullName = data;
+                    GetName.UserID = text;
+                    scanActivity.gotoDonationEditActivity();
                 }
             }
         }

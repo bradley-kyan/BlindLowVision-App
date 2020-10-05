@@ -24,10 +24,30 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"/>
 
+        <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:text="Current Balance:"
+            android:padding="10dp"/>
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:id="@+id/currentBalance"
+            android:padding="10dp"/>
+        </LinearLayout>
+        
+
         <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="25dp"
+        android:textSize="20dp"
         android:text="Choose Reward"
         android:padding="10dp"/>
         
@@ -37,24 +57,66 @@
         android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/radioGroup1">
+        android:id="@+id/radioGroup">
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="RadioButton"
+            android:text="$1:    1 Raffle Entry"
             android:id="@+id/radioButton1" />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="RadioButton"
+            android:checked="true"
+            android:text="$5:    1 Wristband"
             android:id="@+id/radioButton2" />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="RadioButton"
+            android:text="$5:    1 Dog Tag"
             android:id="@+id/radioButton3" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$5:    2 Drinks of choice"
+            android:id="@+id/radioButton4" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="$15:    1 Blind + Low Vision T-shirt"
+            android:id="@+id/radioButton5" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Other: Enter Value"
+            android:id="@+id/radioButton6" />    
+        <EditText
+        android:inputType="number"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/otherValue" />
     </RadioGroup>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:text="New Balance:"
+            android:padding="10dp"/>
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:id="@+id/newBalance"
+            android:padding="10dp"/>
+    </LinearLayout>
+        
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -24,8 +24,7 @@ namespace Blind_LowVision_App_1
 
 
             FindViewById<Button>(Resource.Id.loginButtonInitial).Click += (e, o) =>
-            //StartActivity(typeof(LoginFormActivity));
-            StartActivity(typeof(ScanActivity));
+            StartActivity(typeof(LoginFormActivity));
 
         }
 
