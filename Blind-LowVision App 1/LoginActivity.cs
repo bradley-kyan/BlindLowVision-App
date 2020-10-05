@@ -1,12 +1,7 @@
 ﻿using Android.App;
 using Android.OS;
 using Android.Widget;
-using System;
-using Android.Content;
 using Android.Content.PM;
-using Newtonsoft.Json;
-using System.Threading.Tasks;
-using Android.Support.V7.App;
 
 
 
