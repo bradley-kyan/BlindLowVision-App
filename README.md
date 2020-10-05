@@ -15,7 +15,8 @@ To reporoduce this project the following are needed:
 <li>Reliable internet connetion
 <li>MSSQL Server
 <li>Visual Studio 2019
-  <li><a href="https://visualstudio.microsoft.com/xamarin/">Xamarin</a> package for Visual Studio
+<li><a href="https://visualstudio.microsoft.com/xamarin/">Xamarin</a> package for Visual Studio
+  <li>Windows HyperV enabled<br><i>See <a href="#info"><b>info</b></a> for details on how to enable HyperV
 <li><a href="https://github.com/bradley-kyan/BlindLowVision-Web">BlindLowVision-Web</a> repository</ul>
 
 *It must be noted that the php scripts connection strings for the MSSQL database in this repository will need to be changed to your database*
@@ -23,6 +24,8 @@ To reporoduce this project the following are needed:
 ## Info ##
 To set up the web server I personally used Microsoft IIS due to its great intergration into the Windows OS. XAMPP can be used as well, but i ran into difficulties regarding setting up the MSSQL drivers necessary to run the php scripts.<br>
 [Microsoft Web Platform Installer](https://www.microsoft.com/web/downloads/platform.aspx) made installing the required dependencies easy in comparison to other methods.
+##### HyperV on Windows 10 Home Edition: [Link](https://www.itechtics.com/enable-hyper-v-windows-10-home/) #####
+##### HyperV on Windows 10 Pro/Enterprise: [Link](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v) #####
 
 ### Special thanks to: ###
  [Redth](https://github.com/Redth) - ZXing Xamarin [link](https://github.com/Redth/ZXing.Net.Mobile)<br/><br/>
